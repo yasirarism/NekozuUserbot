@@ -6,9 +6,9 @@ const bot = new duaGram({
     api_hash: 'apihash',
 
     logLevel: 1, // 0 false, 1 event, 2 detail
-    logDetail: "warn", // none, error, warn, info, debug
+    logDetail: "none", // none, error, warn, info, debug
 
-    session: 'string session // Fill in the session here if you have one, or leave it blank 
+    session: 'string session' // Fill in the session here if you have one, or leave it blank 
 });
 
 bot.cmd('ping', async (ctx) => {
@@ -19,6 +19,11 @@ bot.cmd('ping', async (ctx) => {
         return await bot.sendMessage(ctx, `Pong!\nIn ${diff} seconds.`, { parse_mode: 'html' });
 });
 
+bot.cmd('id', async (ctx) => {
+    // message in only
+        let bang = ctx
+        return await bot.sendMessage(ctx, `ID : {bang}.`, { parse_mode: 'html' });
+});
 
 
 bot.start();
