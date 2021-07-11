@@ -1,5 +1,6 @@
 const { duaGram, terminal, lessLog } = require("duagram");
 const { performance } = require('perf_hooks');
+const axios = require('axios')
 
 const bot = new duaGram({
     api_id: apiid,
@@ -37,7 +38,7 @@ bot.cmd('alive', async (ctx) => {
         let kek = performance.now();      
         let k = '<code>' + ((kek - yah) / 1000).toLocaleString('id-ID', { maximumFractionDigits: 3 }) + "</code>"
         let das = bot.peerGetId(ctx);
-        return await bot.sendMessage(ctx, `Nekozu Userbot Is Alive!\nOwner ID: ${das}\nUserbot Version: <code>1.2.0</code>\nUptime: ${k}.`, { parse_mode: 'html' });
+        return await bot.sendMessage(ctx, `Nekozu Userbot Is Alive!\nOwner ID: ${das}\nUserbot Version: <code>1.2.0</code>\nUptime: ${k}\n\n`<a href="https://t.me/nekozu">Update Channel</a>``, { parse_mode: 'html' });
 });
 
 
