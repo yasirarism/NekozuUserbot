@@ -3,13 +3,13 @@ const { performance } = require('perf_hooks');
 const axios = require('axios')
 
 const bot = new duaGram({
-    api_id: apiid,
-    api_hash: 'apihash',
+    api_id: Number(process.env.api_id),
+    api_hash: String(process.env.api_hash),
 
     logLevel: 1, // 0 false, 1 event, 2 detail
     logDetail: "none", // none, error, warn, info, debug
 
-    session: 'string session' // Fill in the session here if you have one, or leave it blank 
+    session: String(process.env.string) // Fill in the session here if you have one, or leave it blank 
 });
 
 bot.cmd('ping', async (ctx) => {
