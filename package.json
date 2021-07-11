@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "axios": "^0.21.1",
-    "duagram": "^1.0.0",
-    "telegraf": "^4.3.0"
-  }
-}
