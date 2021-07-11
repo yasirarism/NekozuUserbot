@@ -21,7 +21,7 @@ bot.cmd('ping', async (ctx) => {
 
 bot.cmd('id', async (ctx) => {
       let chat_id = bot.peerGetId(ctx);
-      // let idd = bot.peerGetId(ctx.channelId);
+      // let idd = bot.peerGetId;
        return await bot.sendMessage(ctx, 'ID: '+chat_id)
 })
 
