@@ -41,5 +41,10 @@ bot.cmd('alive', async (ctx) => {
         return await bot.sendMessage(ctx, `Nekozu Userbot Is Alive!\nOwner ID: ${das}\nUserbot Version: <code>1.2.0</code>\nUptime: ${k}\n\n`<a href="https://t.me/nekozu">Update Channel</a>``, { parse_mode: 'html' });
 });
 
+bot.cmd('berita', async (ctx) => {                                                                                                                                                                                         
+    const news = await axios.get('http://fadhil-a.herokuapp.com/api/berita.php?')
+    const api = news.data.data                                                                                                                                                                                                                                                                                                                                                     
+    return await bot.sendMessage(ctx, 'Judul Berita: '+api.judul+'Link Berita: '+api.link);
+    })
 
 bot.start();
