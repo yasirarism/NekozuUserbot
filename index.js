@@ -1,7 +1,6 @@
 const { duaGram, terminal, lessLog } = require("duagram");
 const { performance } = require('perf_hooks');
 const axios = require('axios')
-const os = require("os")
 const bot = new duaGram({
     api_id: Number(process.env.api_id),
     api_hash: String(process.env.api_hash),
