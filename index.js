@@ -20,10 +20,10 @@ bot.cmd('ping', async (ctx) => {
 });
 
 bot.cmd('id', async (ctx) => {
-    // message in only
-        let bang = ctx
-        return await bot.sendMessage(ctx, `ID : {bang}.`, { parse_mode: 'html' });
-});
+      let chat_id = bot.peerGetId(ctx);
+      // let idd = bot.peerGetId(ctx.channelId);
+       return await bot.sendMessage(ctx, 'ID: '+chat_id)
+})
 
 bot.cmd('nickff', async (ctx) => {                                                                                                                                                                                         
     const nani = await axios.get('https://api.zeks.xyz/api/nickepep?apikey=apivinz')
