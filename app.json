@@ -1,31 +1,30 @@
+  
 {
-      "name": "NekozuUserbot",
-      "description": "Telegram userbot build in nodejs.",
-      "keywords": [
-         "userbot,
-      ],   
-   "repository": "https://github.com/Nekozu/NekozuUserbot",
-    "env": {
-         "api_id": {
-         "description": "Get API_ID from my.telegram.org,
-         "required": true,
-          "value": ""
-      },
-         "api_hash": {
-           "description": "Get API_HASH from my.telegram.org",
-           "required": true,
-           "value": ""
-      },    
-         "session": {
-           "description": "Get It From https://telegram.banghasan.com/ubotstring/",
-           "required": true,
-           "value": "" 
-       }
+  "name": "Userbot for fun for telegram :),
+  "description": "Telegram userbot build with nodejs",
+  "keywords": [
+    "userbot",
+  ],
+  "repository": "https://github.com/nekozu/nekozuuserbot",
+  "env": {
+    "api_id": {
+      "description": "get from https://my.telegram.org/",
+      "required": true
+      "value": "123"
+    },
+    "api_hash": {
+      "description": "get from https://my.telegram.org/",
+      "required": true
+      "value": "164391409520"
+    },
+    "session": {
+      "description": "get from https://telegram.banghasan.com/ubotstring/",
+      "required": true
+      "value": "abcdefg"
+    }
   },
   "buildpacks": [
     {
       "url": "heroku/nodejs"
     }
-  ],
-  "stack": "heroku-20"
-}
+  ]
