@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
-    "duagram": "^1.1.2"
+    "duagram": "^1.1.2",
+    "request": "^2.88.2"
   },
   "devDependencies": {},
   "description": ""
