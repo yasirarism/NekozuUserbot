@@ -8,3 +8,5 @@ This project is soon. but if you want to test you can clone it :)
 
 ## Heroku
   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Nekozu/NekozuUserbot.git)
+
+Heroku deploy is not good for this userbot. So use any hosting or run in local ;)
