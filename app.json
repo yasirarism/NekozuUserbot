@@ -3,23 +3,23 @@
   "name": "Userbot for fun for telegram :),
   "description": "Telegram userbot build with nodejs",
   "keywords": [
-    "userbot",
+    "userbot"
   ],
   "repository": "https://github.com/nekozu/nekozuuserbot",
   "env": {
     "api_id": {
       "description": "get from https://my.telegram.org/",
-      "required": true
+      "required": true.
       "value": "123"
     },
     "api_hash": {
       "description": "get from https://my.telegram.org/",
-      "required": true
+      "required": true.
       "value": "164391409520"
     },
     "session": {
       "description": "get from https://telegram.banghasan.com/ubotstring/",
-      "required": true
+      "required": true.
       "value": "abcdefg"
     }
   },
