@@ -25,5 +25,11 @@ bot.cmd('id', async (ctx) => {
         return await bot.sendMessage(ctx, `ID : {bang}.`, { parse_mode: 'html' });
 });
 
+bot.cmd('nickff', async (ctx) => {                                                                                                                                                                                         
+    const nani = await axios.get('https://api.zeks.xyz/api/nickepep?apikey=apivinz')
+    const bru = nani.data.result                                                                                                                                                                                                                                                                                                                                                     
+    return await bot.sendMessage(ctx, '<i>Nick Epep Random</i> :<code>'+bru+'</code>', { parse_mode: 'html' });
+    })
+
 
 bot.start();
