@@ -1,0 +1,28 @@
+  "name": "NekozuUserbot)",
+  "description": "Telegram userbot dibuat dengan nodejs menggunakan duagam",
+  "keywords": [
+    "telegram",
+    "userbot"
+  ],
+  "repository": "https://github.com/bnekozu/nekozuuserbot",
+  "env": {
+    "api_id": {
+      "description": "Dapatkan dari my.telegram.org.",
+      "required": true
+    },
+    "api_hash": {
+      "description": "Dapatkan dari my.telegram.org.",
+      "required": true
+    },
+    "session": {
+      "description": "Dapatkan dari https://telegram.banghasan.com/ubotstring/.",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "stack": "heroku-20"
+}
