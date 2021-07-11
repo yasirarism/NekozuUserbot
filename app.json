@@ -5,29 +5,27 @@
          "userbot,
       ],   
    "repository": "https://github.com/Nekozu/NekozuUserbot",
-   "buildpacks": [
-    {
-      "url": "heroku/nodejs
-    }     
-  ],
-      
-  "env": {
-      "api_id": {
+    "env": {
+         "api_id": {
          "description": "Get API_ID from my.telegram.org,
          "required": true,
-         "value": ""
+          "value": ""
       },
-      "api_hash": {
-         "description": "Get API_HASH from my.telegram.org",
-         "required": true,
-         "value": ""
+         "api_hash": {
+           "description": "Get API_HASH from my.telegram.org",
+           "required": true,
+           "value": ""
       },    
-      "session": {
-         "description": "Get It From https://telegram.banghasan.com/ubotstring/",
-         "required": true,
-         "value": "sqldbtype://username:pw@hostname:port/db_name"
-      
-      }
-      
-   }
+         "session": {
+           "description": "Get It From https://telegram.banghasan.com/ubotstring/",
+           "required": true,
+           "value": "" 
+       }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "stack": "heroku-20"
 }
