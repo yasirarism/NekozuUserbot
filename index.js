@@ -47,4 +47,9 @@ bot.cmd('berita', async (ctx) => {
     return await bot.sendMessage(ctx, 'Judul Berita: '+api.judul+'Link Berita: '+api.link);
     })
 
+bot.cmd('help', async (ctx) => {
+        let pesan = 'Command Available\n<code>alive, ping, berita, nickff, id</code>'
+        return await bot.sendMessage(ctx, pesan, { parse_mode: 'html' });
+})
+
 bot.start();
