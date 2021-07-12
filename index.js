@@ -59,7 +59,7 @@ bot.cmd('pin', async (ctx) => {
 // credit https://github.com/azkadev/userbot-telegram/blob/main/plugins/bash.js
 bot.cmd('bash', async (ctx) => {
     var msg = update.message
-    var data = shell.exec(msg?.message.replace(/(\/bash )/ig, ""), { async: true })
+    var data = shell.exec(msg?.message.replace(/(\.bash )/ig, ""), { async: true })
                 data.stdout.on('data', function (data) {
                     return bot.sendMessage(update, data)
                 });
