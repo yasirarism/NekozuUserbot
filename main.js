@@ -52,7 +52,7 @@ bot.cmd('help', async (ctx) => {
 })
 
 bot.cmd('pin', async (ctx) => {
-        return await bot.pinMessage(ctx)
+        return await bot.pinMessage(ctx, bot.reply_to_message_id)
 })
 
 bot.start();
