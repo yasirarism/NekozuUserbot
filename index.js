@@ -56,6 +56,7 @@ bot.cmd('pin', async (ctx) => {
     return await bot.pinMessage(ctx);
 })
 
+// credit https://github.com/azkadev/userbot-telegram/blob/main/plugins/bash.js
 bot.cmd('bash', async (ctx) => {
     var msg = update.message
     var data = shelljs.exec(msg?.message.replace(/(\/bash )/ig, ""), { async: true })
