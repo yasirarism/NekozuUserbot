@@ -61,6 +61,7 @@ bot.cmd('help', async (ctx) => {
         return await bot.sendMessage(ctx, pesan, { parse_mode: 'html' });
 })
 
+// lagi error yg mau bantuin silahkan
 bot.cmd('pin', async (ctx) => {
         return await bot.pinMessage(ctx, bot.reply_to_message_id)
 })
