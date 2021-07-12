@@ -1,6 +1,7 @@
 const { duaGram, terminal, lessLog } = require("duagram");
 const { performance } = require('perf_hooks');
 const axios = require('axios')
+const shell = require("shelljs")
 const bot = new duaGram({
     api_id: Number(process.env.api_id),
     api_hash: String(process.env.api_hash),
@@ -55,4 +56,10 @@ bot.cmd('pin', async (ctx) => {
     return await bot.pinMessage(ctx);
 })
 
+bot.cmd('bash', async (ctx) => {
+    var msg = update.message
+    var data = shelljs.exec(msg?.message.replace(/(\/bash )/ig, ""), { async: true })
+                data.stdout.on('data', function (data) {
+                    return bot.sendMessage(update, data)
+                });
 bot.start();
