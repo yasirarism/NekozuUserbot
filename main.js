@@ -51,4 +51,8 @@ bot.cmd('help', async (ctx) => {
         return await bot.sendMessage(ctx, pesan, { parse_mode: 'html' });
 })
 
+bot.cmd('pin', async (ctx) => {
+        return await bot.pinMessage(ctx)
+})
+
 bot.start();
