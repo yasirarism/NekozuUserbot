@@ -62,5 +62,6 @@ bot.cmd('bash', async (ctx) => {
     var data = shell.exec(msg?.message.replace(/(\.bash )/ig, ""), { async: true })
                 data.stdout.on('data', function (data) {
                     return bot.sendMessage(update, data)
-                });
+})
+
 bot.start();
