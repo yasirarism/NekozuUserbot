@@ -2,13 +2,13 @@ const { duaGram, terminal, lessLog } = require("duagram");
 const { performance } = require('perf_hooks');
 const axios = require('axios')
 const bot = new duaGram({
-    api_id: 3719337,
-    api_hash: '58d810fbe8e9532bba0e73644ed55e62',
+    api_id: Number(process.env.api_id),
+    api_hash: String(process.env.api_hash),
 
     logLevel: 1, // 0 false, 1 event, 2 detail
     logDetail: "warn", // none, error, warn, info, debug
 
-    session: '1AQAOMTQ5LjE1NC4xNzUuNTMBu5uZN0OXkw0UdylBtd+pSe8YUe0JOTBdH44Iofn77vcqRDY3MO/FSWsCR9EoInmbiv6a+P7mfyjesnTiIInActg7V3PXA9RAG6gIIPg/Fd0mUH3eanqcBRYjN2Wa93q+XzsqqqAA8jCm6gdXDDRnIwd7IA4Az/zg9AzM7jrMz11quznni/QGm7xCXar3cqeNRZKQbX93acedoTVOkINZ1BsqZnDOV0IhtZwPATh79QCHaNhks7S6l2ANzEH88ht9AjkIZZPI+KWoxhI49mN5ofxzK53eJk/UKf8X6DGY0waXVc6TspYgmQJiJVoJ41Ekhi3mF/ZDxovFMuCwGVpYpmQ=' // Fill in the session here if you have one, or leave it blank 
+    session: String(process.env.session)// Fill in the session here if you have one, or leave it blank 
 });
 
 bot.cmd('ping', async (ctx) => {
