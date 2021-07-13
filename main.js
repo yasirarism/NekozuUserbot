@@ -52,7 +52,11 @@ bot.cmd('help', async (ctx) => {
 
 // lagi error yg mau bantuin silahkan
 bot.cmd('pin', async (ctx) => {
-        return await bot.pinMessage(ctx, bot.reply_to_message_id)
+        return await bot.pinMessage(ctx)
+})
+
+bot.cmd('unpinall', async (ctx) => {
+        return await bot.unpinAllMessages(ctx)
 })
 
 bot.start();
