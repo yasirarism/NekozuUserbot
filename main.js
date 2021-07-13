@@ -56,7 +56,10 @@ bot.cmd('pin', async (ctx) => {
         let message_id;
         if (result.updates) {
         message_id = result.updates[0].id
-        return await bot.pinMessage(ctx, messge_id);
+        } else {
+        message_id = result.id;
+    }
+        return await bot.pinMessage(ctx, message_id);
 })
 
 bot.cmd('unpinall', async (ctx) => {
