@@ -53,8 +53,8 @@ bot.cmd('help', async (ctx) => {
 // lagi error yg mau bantuin silahkan
 bot.cmd('pin', async (ctx) => {
         if(ctx.replyTo) {
-        ctx.replyTo.text = await bot.client.getMessages
-        return await bot.pinMessage(ctx, ctx.replyTo.text)
+        let reply = await bot.client.getMessages
+        return await bot.pinMessage(ctx, reply)
 })
 
 bot.cmd('unpinall', async (ctx) => {
