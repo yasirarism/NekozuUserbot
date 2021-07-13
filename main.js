@@ -19,7 +19,7 @@ bot.cmd('ping', async (ctx) => {
 });
 
 bot.cmd('id', async (ctx) => {
-      let chat_id = bot.peerGetId(ctx);
+      let chat_id = bot.getPeerId(ctx);
       // let idd = bot.peerGetId;
        return await bot.sendMessage(ctx, 'ID: '+chat_id)
 })
@@ -35,7 +35,7 @@ bot.cmd('alive', async (ctx) => {
         let yah = performance.now();
         let kek = performance.now();      
         let k = '<code>' + ((kek - yah) / 1000).toLocaleString('id-ID', { maximumFractionDigits: 3 }) + "</code>"
-        let das = bot.peerGetId(ctx);                                                                                                                                                                                              
+        let das = bot.getPeerId(ctx);                                                                                                                                                                                              
         return await bot.sendMessage(ctx, `Nekozu Userbot Is Alive!\nOwner ID: <code>${das}</code>\nUserbot Version: <code>1.2.0</code>\nUptime: ${k}\n\n<a href="https://t.me/nekozu">Update Channel</a>`, { parse_mode: 'html' });
 });
 
@@ -52,10 +52,12 @@ bot.cmd('help', async (ctx) => {
 
 // lagi error yg mau bantuin silahkan
 bot.cmd('pin', async (ctx) => {
-        if(ctx.replyTo) {
-        let reply = await bot.client.getMessages
-        return await bot.pinMessage(ctx, reply);
-
+        let result = bot.reply_to_message_id
+        let message_id;
+        if (result.updates) {
+        message_id = result.updates[0].id
+        return await bot.pinMessage(ctx, messge_id);
+})
 
 bot.cmd('unpinall', async (ctx) => {
         return await bot.unpinAllMessages(ctx)
