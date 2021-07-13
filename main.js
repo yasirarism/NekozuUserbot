@@ -54,8 +54,8 @@ bot.cmd('help', async (ctx) => {
 bot.cmd('pin', async (ctx) => {
         if(ctx.replyTo) {
         let reply = await bot.client.getMessages
-        return await bot.pinMessage(ctx, reply)
-})
+        return await bot.pinMessage(ctx, reply);
+
 
 bot.cmd('unpinall', async (ctx) => {
         return await bot.unpinAllMessages(ctx)
