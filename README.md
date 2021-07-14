@@ -16,3 +16,6 @@ Heroku deploy is not good for this userbot. So use any hosting or run in local ;
 ```
 If you want to contribute you are welcome :)
 ```
+
+# Python Version
+[Here](https://github.com/nekozu/nekozuuserbotpython
