@@ -98,7 +98,7 @@ bot.cmd('gempa', async (ctx) => {
     sudoacces                                                                                                                                                                                         
     const gem = await axios.get('https://mhankbarbar.herokuapp.com/api/infogempa?')
     const pa = gem.data                                                                                                                                                                                                                                                                                                                                                    
-    return await bot.sendMessage(ctx, 'Kedalaman: '+pa.kedalaman+'\Kordinat: '+pa.koordinat+"\nLokasi: '+pa.lokasi+'\nMagnitude: '+pa.magnitude+'\nPotensi: '+pa.potensi+'\nWaktu: '+pa.waktu);
+    return await bot.sendMessage(ctx, 'Kedalaman: '+pa.kedalaman+'\Kordinat: '+pa.koordinat+'\nLokasi: '+pa.lokasi+'\nMagnitude: '+pa.magnitude+'\nPotensi: '+pa.potensi+'\nWaktu: '+pa.waktu);
     })
 
 bot.start();
