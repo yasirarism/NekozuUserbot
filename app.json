@@ -17,7 +17,11 @@
     },
     "session": {
       "description": "Dapatkan dari https://telegram.banghasan.com/ubotstring/.",
-      "required": false
+      "required": true
+    },
+    "admin_id": {
+      "description": "ID Admin untuk userbotnya atau juga bisa make id userbotnya.",
+      "required": true
     }
   },
   "buildpacks": [
