@@ -18,4 +18,4 @@ If you want to contribute you are welcome :)
 ```
 
 # Python Version
-[Here](https://github.com/nekozu/nekozuuserbotpython
+[Here](https://github.com/nekozu/nekozuuserbotpython)
