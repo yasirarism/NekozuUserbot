@@ -46,7 +46,7 @@ bot.cmd('berita', async (ctx) => {
     })
 
 bot.cmd('help', async (ctx) => {
-        let pesan = 'Command Available\n<code>alive, ping, berita, nickff, id</code>'
+        let pesan = 'Command Available\n<code>alive, ping, berita, nickff, id, gempa</code>'
         return await bot.sendMessage(ctx, pesan, { parse_mode: 'html' });
 })
 
