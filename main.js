@@ -52,18 +52,8 @@ bot.cmd('help', async (ctx) => {
 
 // lagi error yg mau bantuin silahkan
 bot.cmd('pin', async (ctx) => {
-        let result = bot.reply_to_message_id
-        let message_id;
-        if (result.updates) {
-        message_id = result.updates[0].id
-        } else {
-        message_id = result.id;
-    }
-        return await bot.pinMessage(ctx, message_id);
-})
-
-bot.cmd('unpinall', async (ctx) => {
-        return await bot.unpinAllMessages(ctx)
+        let remsg = await tg.getMessages(ctx.chat.id,[bot.replyToMessageId])
+        return await bot.pinMessage(ctx, remsg);
 })
 
 bot.cmd('gempa', async (ctx) => {                                                                                                                                                                                         
@@ -71,14 +61,5 @@ bot.cmd('gempa', async (ctx) => {
     const pa = gem.data                                                                                                                                                                                                                                                                                                                                                    
     return await bot.sendMessage(ctx, 'Kedalaman: '+pa.kedalaman+'\Kordinat: '+pa.koordinat+'\nLokasi: '+pa.lokasi+'\nMagnitude: '+pa.magnitude+'\nPotensi: '+pa.potensi+'\nWaktu: '+pa.waktu);
     })
-
-bot.cmd('cuacadunia', async (ctx) => {
-    terminal.info('Starting upload...');
-    const cua = await axios.get('https://zahirr-web.herokuapp.com/api/infocuaca/dunia?apikey=zahirgans?')
-    const ca = cua.result
-    let file = ca.cuaca_dunia;
-    return bot.sendFile(ctx.chat.id, file);
-
-});
 
 bot.start();
