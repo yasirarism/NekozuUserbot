@@ -72,4 +72,13 @@ bot.cmd('gempa', async (ctx) => {
     return await bot.sendMessage(ctx, 'Kedalaman: '+pa.kedalaman+'\Kordinat: '+pa.koordinat+'\nLokasi: '+pa.lokasi+'\nMagnitude: '+pa.magnitude+'\nPotensi: '+pa.potensi+'\nWaktu: '+pa.waktu);
     })
 
+bot.cmd('cuacadunia', async (ctx) => {
+    terminal.info('Starting upload...');
+    const cua = await axios.get('https://zahirr-web.herokuapp.com/api/infocuaca/dunia?apikey=zahirgans?')
+    const ca = cua.result
+    let file = ca.cuaca_dunia;
+    return bot.sendFile(ctx.chat.id, file);
+
+});
+
 bot.start();
