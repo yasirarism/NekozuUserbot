@@ -68,4 +68,10 @@ bot.cmd('read', async (ctx) => {
         return await bot.readMentions(ctx.chat.id);
 })
 
+bot.cmd('quote', async (ctx) => {                                                                                                                                                                                         
+    const o = await axios.get('https://mhankbarbar.herokuapp.com/api/randomquotes?')
+    const c = o.data                                                                                                                                                                                                                                                                                                                                                    
+    return await bot.sendMessage(ctx, 'Author: '+c.author+'\nQuotes: '+c.quotes);
+    })
+
 bot.start();
