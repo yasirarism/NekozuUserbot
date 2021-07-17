@@ -11,6 +11,8 @@ const bot = new duaGram({
     session: String(process.env.session)// Fill in the session here if you have one, or leave it blank 
 });
 
+bot.cmdPrefix = String(process.env.prefix);
+
 bot.cmd('ping', async (ctx) => {
     let t0 = performance.now();
     let t1 = performance.now();
