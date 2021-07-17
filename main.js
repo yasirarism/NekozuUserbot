@@ -52,8 +52,8 @@ bot.cmd('help', async (ctx) => {
 
 // lagi error yg mau bantuin silahkan
 bot.cmd('pin', async (ctx) => {
-        let remsg = await tg.getMessages(ctx.chat.id,[bot.replyToMessageId])
-        return await bot.pinMessage(ctx, remsg);
+        let remsg = await bot.getMessages(ctx.chat.id,[bot.replyToMessageId])
+        return await bot.pinMessage(ctx.chat.id, remsg);
 })
 
 bot.cmd('gempa', async (ctx) => {                                                                                                                                                                                         
@@ -61,5 +61,9 @@ bot.cmd('gempa', async (ctx) => {
     const pa = gem.data                                                                                                                                                                                                                                                                                                                                                    
     return await bot.sendMessage(ctx, 'Kedalaman: '+pa.kedalaman+'\Kordinat: '+pa.koordinat+'\nLokasi: '+pa.lokasi+'\nMagnitude: '+pa.magnitude+'\nPotensi: '+pa.potensi+'\nWaktu: '+pa.waktu);
     })
+
+bot.cmd('read', async (ctx) => {
+        return await bot.readMentions(ctx.chat.id);
+})
 
 bot.start();
