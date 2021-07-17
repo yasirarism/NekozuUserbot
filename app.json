@@ -18,6 +18,10 @@
     "session": {
       "description": "Dapatkan dari https://telegram.banghasan.com/ubotstring/.",
       "required": true
+    },
+    "prefix": {
+      "description": "Preifx untuk bot kamu contoh ! atau .",
+      "required": true
     }
   },
   "buildpacks": [
