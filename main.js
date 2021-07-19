@@ -54,8 +54,7 @@ bot.cmd('help', async (ctx) => {
 
 // lagi error yg mau bantuin silahkan
 bot.cmd('pin', async (ctx) => {
-        let remsg = await bot.getMessages(ctx.chat.id,[bot.replyToMessageId])
-        return await bot.pinMessage(ctx.chat.id, remsg);
+        return await bot.pinMessage(ctx.chat.id, ctx.id);
 })
 
 bot.cmd('gempa', async (ctx) => {                                                                                                                                                                                         
@@ -73,5 +72,7 @@ bot.cmd('quote', async (ctx) => {
     const c = o.data                                                                                                                                                                                                                                                                                                                                                    
     return await bot.sendMessage(ctx, 'Author: '+c.author+'\nQuotes: '+c.quotes);
     })
+
+
 
 bot.start();
