@@ -52,7 +52,7 @@ bot.cmd('help', async (ctx) => {
 
 // lagi error yg mau bantuin silahkan
 bot.cmd('pin', async (ctx) => {
-        return await bot.pinMessage(ctx.chat.id, ctx.id);
+        return await bot.pinMessage(ctx, ctx.id);
 })
 
 bot.cmd('gempa', async (ctx) => {                                                                                                                                                                                         
@@ -74,7 +74,7 @@ bot.cmd('quote', async (ctx) => {
 bot.cmd('fakedata', async (ctx) => {                                                                                                                                                                                         
     const f = await axios.get('https://zahirr-web.herokuapp.com/api/fakedata?country=en&apikey=zahirgans')
     const k = f.result                                                                                                                                                                                                                                                                                                                                                   
-    return await bot.sendMessage(ctx.chat.id, 'Nama: '+k.name+'\nUlang Tahun: '+k.birthday+'\nAlamat: '+k.address+'\nKota: '+k.city+'\nNomor Telepon: '+k.phone_number+'\nEmail: '+k.email+'\nPassword: '+k.password+'\nZip: '+k.zip+'\nNegara: '+k.country);
+    return await bot.sendMessage(ctx, 'Nama: '+k.name+'\nUlang Tahun: '+k.birthday+'\nAlamat: '+k.address+'\nKota: '+k.city+'\nNomor Telepon: '+k.phone_number+'\nEmail: '+k.email+'\nPassword: '+k.password+'\nZip: '+k.zip+'\nNegara: '+k.country);
     })
 
 bot.cmd('cuacadunia', async (ctx) => {
