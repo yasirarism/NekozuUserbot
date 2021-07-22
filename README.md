@@ -2,7 +2,7 @@
 
 Telegram Userbot Based On [Duagram](https://github.com/ubotindonesia/duagram) For The Library
 
-This project is soon. but if you want to test you can clone it :)
+Written In [`NodeJs`](https://nodejs.org)
 
 [SESSION](https://telegram.banghasan.com/ubotstring/)
 
