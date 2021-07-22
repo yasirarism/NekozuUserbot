@@ -80,8 +80,7 @@ bot.cmd('fakedata', async (ctx) => {
 bot.cmd('cuacadunia', async (ctx) => {
     terminal.info('Starting upload...');
     const wibu = await axios.get('https://zahirr-web.herokuapp.com/api/infocuaca/dunia?apikey=zahirgans')
-    const lari = wibu.result.cuaca_dunia   
-    let file = lari;
+    let file = wibu.result.cuaca_dunia  
     return bot.sendFile(ctx, file);
 });
 
