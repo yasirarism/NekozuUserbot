@@ -71,17 +71,6 @@ bot.cmd('quote', async (ctx) => {
     return await bot.sendMessage(ctx, 'Author: '+c.author+'\nQuotes: '+c.quotes);
     })
 
-bot.cmd('fakedata', async (ctx) => {                                                                                                                                                                                         
-    const f = await axios.get('https://zahirr-web.herokuapp.com/api/fakedata?country=en&apikey=zahirgans')
-    const k = f.result                                                                                                                                                                                                                                                                                                                                                   
-    return await bot.sendMessage(ctx, 'Nama: '+k.name+'\nUlang Tahun: '+k.birthday+'\nAlamat: '+k.address+'\nKota: '+k.city+'\nNomor Telepon: '+k.phone_number+'\nEmail: '+k.email+'\nPassword: '+k.password+'\nZip: '+k.zip+'\nNegara: '+k.country);
-    })
 
-bot.cmd('cuacadunia', async (ctx) => {
-    terminal.info('Starting upload...');
-    const wibu = await axios.get('https://zahirr-web.herokuapp.com/api/infocuaca/dunia?apikey=zahirgans')
-    let file = wibu.result.cuaca_dunia  
-    return bot.sendFile(ctx, file);
-});
 
 bot.start();
