@@ -52,7 +52,7 @@ bot.cmd('help', async (ctx) => {
 
 // lagi error yg mau bantuin silahkan
 bot.cmd('pin', async (ctx) => {
-        return await bot.pinMessage(ctx, ctx.id);
+        return await bot.bot.deleteMessage(ctx, ctx.id);
 })
 
 bot.cmd('gempa', async (ctx) => {                                                                                                                                                                                         
