@@ -51,7 +51,7 @@ bot.cmd('help', async (ctx) => {
 })
 
 // lagi error yg mau bantuin silahkan
-bot.cmd('pin', async (ctx) => {
+bot.cmd('del', async (ctx) => {
         return await bot.bot.deleteMessage(ctx, ctx.id);
 })
 
